@@ -1,3 +1,5 @@
+[![DOI](https://img.shields.io/badge/DOI-10.82901%2Fnemar.on004381-blue)](https://doi.org/10.82901/nemar.on004381)
+
 # Intraoperative EEG dataset during medianus-tibialis stimulation with 8 different rates
 This dataset was obtained from the publication [1] wherein we varyied the stimulus repetition rate and recorded medianus and tibial nerve SEP. 
 We randomly sampled a number of sweeps corresponding to recording durations up to 20 s and calculated the signal-to-noise ratio (SNR).
