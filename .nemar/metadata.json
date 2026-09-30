@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Intraoperative EEG dataset during medianus-tibialis stimulation with 8 different rates",
-  "description": "This intraoperative EEG dataset comprises somatosensory evoked potentials (SEP) recorded from 14 adult and 4 pediatric subjects during median and tibial nerve stimulation at 8 different stimulation rates. The dataset was collected to optimize signal-to-noise ratio in short-duration SEP recordings through systematic variation of stimulus repetition rates, with both raw continuous EEG data and processed derivatives provided for 34 median SEP and 32 tibial SEP sessions.",
-  "methods_description": "EEG data were recorded continuously during median and tibial nerve stimulation at varying rates. Offline processing included high-pass filtering at 200 Hz, stimulus artifact detection via local peak detection, and sweep definition with post-stimulus recording lengths of 50 ms for median SEP and 100 ms for tibial SEP. Data were resampled to 1200 Hz, and sweeps with amplitude exceeding 10 µV were classified as artifact-ridden and excluded.",
+  "description": "Intraoperative EEG recordings of somatosensory evoked potentials (SEP) elicited by median and tibial nerve stimulation at eight different stimulus repetition rates. The dataset includes 14 adult and 4 pediatric subjects, with continuous EEG split into sessions by nerve and side and into runs by stimulation rate. Processed derivatives are also provided. The data were used to assess how stimulation rate affects the signal-to-noise ratio of short-duration SEP recordings.",
+  "methods_description": "Continuous intraoperative EEG was recorded in parallel to SEP stimulation of the median and tibial nerves (left/right), with one run per stimulation rate. Stimulus artefacts were detected after high-pass filtering at 200 Hz and used as triggers to define sweeps (50 ms for median, 100 ms for tibial SEP). Data were resampled to 1200 Hz, and sweeps with amplitude >10 µV were rejected. Random subsets of sweeps corresponding to recording durations up to 20 s were used to calculate SNR. Data were converted to BIDS with bids-starter-kit and custom Matlab scripts.",
   "license": "CC0",
   "dataset_type": "raw",
   "authors": {
@@ -24,16 +24,19 @@
       "term": "EEG"
     },
     {
-      "term": "somatosensory evoked potentials"
+      "term": "Somatosensory Evoked Potentials"
     },
     {
-      "term": "intraoperative monitoring"
+      "term": "intraoperative neuromonitoring"
     },
     {
       "term": "median nerve stimulation"
     },
     {
       "term": "tibial nerve stimulation"
+    },
+    {
+      "term": "stimulation rate"
     },
     {
       "term": "signal-to-noise ratio"
@@ -46,11 +49,6 @@
       "relation_type": "IsDescribedBy"
     },
     {
-      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=on004381",
-      "identifier_type": "URL",
-      "relation_type": "IsDescribedBy"
-    },
-    {
       "identifier": "10.1016/j.clinph.2023.03.008",
       "identifier_type": "DOI",
       "relation_type": "IsDescribedBy"
@@ -59,6 +57,11 @@
       "identifier": "10.18112/openneuro.ds004381.v1.0.2",
       "identifier_type": "DOI",
       "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/on004381",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
     }
   ],
   "funding_references": [
@@ -70,7 +73,8 @@
       "award_number": "204651"
     },
     {
-      "funder_name": "Alexander S. Onassis Public Benefit Foundation"
+      "funder_name": "Alexander S. Onassis Public Benefit Foundation",
+      "award_title": "Scholarship"
     }
   ],
   "resource_type_general": "Dataset",
@@ -79,7 +83,7 @@
     "eeg"
   ],
   "sizes": [
-    "8.3 GB (446 files)"
+    "7.73 GB (446 files)"
   ],
   "formats": [
     ".edf",
